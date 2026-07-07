@@ -1,14 +1,42 @@
-body {
+h1 {
   font-family: Arial, sans-serif;
-  font-size: 19px;
-  line-height: 18px;
-}
-
-  title {
   font-size: 70px;
   font-weight: 400;
   line-height: 78px;
   margin: 0;
   text-align: center;
   color:darkblue;
+}
+
+  title {
+  font-size: 0;
+  font-weight: 0;
+  line-height: 0;
+  margin: 0;
+}
+
+.product-card {
+  border: 0.5px;
+  padding: 20pz;
+  list-style-type: none;
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 380px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+}
+
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
 }
