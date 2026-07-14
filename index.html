@@ -4,15 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Карточки товаров</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>Выбери свой продукт</h1>
-
-  <ul>
+  <ul class="cards-grid">
+  </ul> 
+</body>
+  <div class="product-list">
     <li class="product-card">
       <img src="images/photo_1.jpg" alt="Товар.Увлажняющий мусс"/>
-      <span>ДЛЯ НОРМАЛЬНОЙ КОЖИ</span>
+      <p>ДЛЯ НОРМАЛЬНОЙ КОЖИ</p>
       <h2>Увлажняющий мусс</h2>
       <p>Глубоко увлажняет кожу лица, оставляя её мягкой и гладкой.</p>
 
@@ -26,14 +31,14 @@
 
       <div class="price-container">
     <span>Цена:</span>
-    <span>2 750 ₽</span>
+    <span class="price-value">2 750 ₽</span>
     </div>
     </li>
       
     
     <li class="product-card">
       <img src="images/photo_2.jpg" alt="Товар.Увлажняющая маска"/>
-      <span>ДЛЯ НОРМАЛЬНОЙ КОЖИ</span>
+      <p>ДЛЯ НОРМАЛЬНОЙ КОЖИ</p>
       <h2>Увлажняющая маска</h2>
       <p>Способствует удерживанию влаги в верхних слоях кожи.</p>
 
