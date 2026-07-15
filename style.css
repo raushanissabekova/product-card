@@ -37,9 +37,10 @@ h1 {
   background-color: #F7F7FA;
   padding: 25px;
   border-radius: 12px;
-  max-width: 380px;
   margin-bottom: 30px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  width: calc((100% - 60px) / 3); 
+  min-width: 280px;
 }
 
 .product-card h2 {
@@ -83,10 +84,11 @@ img {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
   justify-content: center;
-  padding: 25px;  
-  margin: 0;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px;
 }
 
 .product-card p:first-of-type {
