@@ -1,11 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  background-image: url('images/bg_1.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 790px 697px;
+}
+
 h1 {
-  font-family: Arial, sans-serif;
   font-size: 70px;
   font-weight: 400;
   line-height: 78px;
-  margin: 0;
+  margin: 220px auto 100px auto;
   text-align: center;
-  color:darkblue;
+  color: #515076;
+  width: 846px;
 }
 
   title {
@@ -16,15 +31,29 @@ h1 {
 }
 
 .product-card {
+  color: #333333;
   border: 0.5px;
-  padding: 20pz;
   list-style-type: none;
-  background-color: #f9f9f9;
+  background-color: #F7F7FA;
   padding: 25px;
   border-radius: 12px;
-  max-width: 380px;
   margin-bottom: 30px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  width: calc((100% - 60px) / 3); 
+  min-width: 280px;
+}
+
+.product-card h2 {
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 8px;
+}
+
+.product-card price {
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 10px;
 }
 
 img {
@@ -32,6 +61,10 @@ img {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  object-fit: contain;
+  padding: 8px;
 }
 
 .price-container {
@@ -39,4 +72,65 @@ img {
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
+}
+
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+.product-card p:first-of-type {
+    margin-bottom: 10px; 
+}
+
+.product-card p:nth-of-type(2) {
+    margin-bottom: 15px; 
+}
+
+.product-card p {
+    line-height: 1.4;
+}
+
+.product-card ul li {
+    position: relative;
+    padding-left: 17px;
+    line-height: 1.4;
+    margin-bottom: 6p;
+}
+
+.product-card ul {
+    list-style-type: none;
+    margin-top: 10px;
+    padding-left: 0;
+}
+
+.price-container span:first-of-type {
+    font-weight: 700;
+}
+.product-card ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid rgb(79, 79, 80);
+    box-sizing: border-box;
 }
