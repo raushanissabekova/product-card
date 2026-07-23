@@ -1,0 +1,16 @@
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.product-card price {
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.price-container span:first-of-type {
+    font-weight: 700;
+}
