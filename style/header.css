@@ -49,3 +49,17 @@
 .header__cart-btn:hover {
   background-color: #555555;
 }
+
+.toggle-btn:hover {
+    background-color: #2196F3;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn_active {
+    background-color: #4CAF50;
+}
