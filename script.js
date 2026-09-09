@@ -71,7 +71,3 @@ if (allCards.length > 0) {
     });
   });
 }
-
-console.log(car.brand);
-console.log(car.owner.firstName);
-
