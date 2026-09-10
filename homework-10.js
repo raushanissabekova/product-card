@@ -1,3 +1,7 @@
+import { products } from './products.js';
+
+console.log(productDescriptionsArray);
+
 const numbers = [1, 2, 3, 4, 5];
 
 const sum = numbers.reduce((acc, num) => {
@@ -14,30 +18,28 @@ const productDescriptionsArray = products.reduce((acc, product) => {
   return acc;
 }, []);
 
-console.log(productDescriptionsArray);
-
-
-import { products } from './products.js';
 
 // 1. Функция запроса количества карточек с валидацией
-function getCardCount() {
-  const userInput = prompt('Сколько карточек отобразить? От 1 до 5');
+function getValidCount() {
+  while (true) {
+    const userInput = prompt('Введите количество (от 1 до 5):');
 
-  // Преобразуем введенную строку в число
-  const count = Number(userInput);
+    // Если пользователь нажал "Отмена"
+    if (userInput === null) {
+      return null; 
+    }
 
-  // Проверяем условия:
-  // - count должен быть от 1 до 5
-  // - введенное значение не должно быть NaN (если ввели буквы)
-  // - пользователь не должен был нажать "Отмена" (userInput !== null)
-  if (userInput !== null && !isNaN(count) && count >= 1 && count <= 5) {
-    return count;
-  } else {
+    const count = Number(userInput.trim());
+
+    // Проверяем: строка не пустая, это число, и оно входит в диапазон 1..5
+    if (userInput.trim() !== '' && !isNaN(count) && count >= 1 && count <= 5) {
+      return count; // Успех: возвращаем число и выходим из функции (и цикла)
+    }
+
     alert('Пожалуйста, введите корректное число от 1 до 5!');
     return 0; // Возвращаем 0, если ввод неверный
   }
-}
-
+} 
 // 2. Функция рендеринга карточек
 function renderCards(cardsArray) {
   const container = document.querySelector('.products'); // Находим список UL в HTML
@@ -75,9 +77,9 @@ function renderCards(cardsArray) {
 }
 
 // 3. Запуск при старте страницы
-const count = getCardCount();
+const count = getValidCount();
 
-if (count > 0) {
+if (count !== null) {
   // Берем ровно столько карточек из массива, сколько ввел пользователь
   const productsToRender = products.slice(0, count);
   renderCards(productsToRender);
