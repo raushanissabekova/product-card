@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="style/title.css">
   <link rel="stylesheet" href="style/products.css">
   <link rel="stylesheet" href="style/footer.css">
+  <link rel="stylesheet" href="style/modal.css">
   <script type="module" src="main.js"></script>
   
 </head>
@@ -30,6 +31,7 @@
           </ul>
         </nav>
 
+        <button class="header__reg-btn" id="open-modal-btn" type="button">Регистрация</button>
         <button class="header__cart-btn" type="button">Корзина</button>
       </div>
     </header>
@@ -174,9 +176,10 @@
         <!-- Центральная колонка: Форма подписки -->
         <div class="footer__col footer__col--subscribe">
           <h3 class="footer__subtitle">Подпишись на наши акции:</h3>
-          <form class="footer__subscribe-form">
+          <form class="footer__subscribe-form" id="subscribe-form">
             <input 
               type="email" 
+              id="subscribe-email"
               class="footer__input" 
               placeholder="Введи Email..." 
               required
@@ -203,12 +206,53 @@
       <div class="footer__bottom">
         <small class="footer__copy">www.product-cards.com &copy; all right reserve</small>
       </div>
-   </footer>
+    </footer>
+
+    <div class="modal overlay" id="registration-modal">
+      <div class="modal__content">
+        <button type="button" class="modal__close" id="close-modal-btn">&times;</button>
+        <h2>Регистрация</h2>
+        <form class="modal__form" id="register-form" novalidate>
+          <div class="modal__field">
+            <label for="reg-first-name">Имя</label>
+            <input type="text" id="reg-first-name" placeholder="Введите имя" required>
+          </div>
+
+          <div class="modal__field">
+            <label for="reg-last-name">Фамилия</label>
+            <input type="text" id="reg-last-name" placeholder="Введите фамилию" required>
+          </div>
+
+          <div class="modal__field">
+            <label for="reg-birth-date">Дата рождения</label>
+            <input type="date" id="reg-birth-date" required>
+          </div>
+
+          <div class="modal__field">
+            <label for="reg-login">Логин</label>
+            <input type="text" id="reg-login" placeholder="Придумайте логин" minlength="3" required>
+          </div>
+
+          <div class="modal__field">
+            <label for="reg-password">Пароль</label>
+            <input type="password" id="reg-password" placeholder="Введите пароль" minlength="6" required>
+          </div>
+
+          <div class="modal__field">
+            <label for="reg-confirm-password">Повторите пароль</label>
+            <input type="password" id="reg-confirm-password" placeholder="Повторите пароль" required>
+          </div>
+
+          <button type="submit" class="modal__submit-btn">Зарегистрироваться</button>
+        </form>
+      </div>
+     </div> 
 
     <script src="./script.js"></script>
     <script src="./homework-7.js"></script>
     <script src="./homework-8.js"></script>
-    <script src="./homework-9.js"></script>
+    <script type="module" src="./homework-9.js"></script>
     <script type="module" src="./homework-10.js"></script>
+    <script type="module" src="./homework-11.js"></script>
   </body>
 </html>
