@@ -47,11 +47,10 @@ if (regForm && modal) {
     const password = document.querySelector('#reg-password')?.value;
     const confirmPassword = document.querySelector('#reg-confirm-password')?.value;
 
-    // 1. Проверка checkValidity()
-    if (!regForm.checkValidity()) {
-      alert('Регистрация отклонена: Заполните все поля корректно!');
-      return;
-    }
+    // 1. Проверка и визуализация ошибок формы
+if (!regForm.reportValidity()) {
+  return; // Форма невалидна: браузер сам покажет подсказку на ошибочном поле
+}
 
     // 2. Проверка совпадения паролей
     if (password !== confirmPassword) {
@@ -65,7 +64,6 @@ if (regForm && modal) {
       lastName: document.querySelector('#reg-last-name').value.trim(),
       birthDate: document.querySelector('#reg-birth-date').value,
       login: document.querySelector('#reg-login').value.trim(),
-      password: password,
       createdOn: new Date()
     };
 
