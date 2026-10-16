@@ -97,9 +97,9 @@ class Serum extends CosmeticProduct {
   } 
 }
 
-showActiveIngredient() {
+showActiveIngredient()
    console.log(`Название: ${this.name}, Цена: ${this.price}, Бренд: ${this.brand}, Активный ингредиент: ${this.activeIngredient}`);
-  }
+  
   
 const serum = new Serum('Сыворотка', 1500, 'Brand', 'Витамин C');
 console.log(serum.showInfo());

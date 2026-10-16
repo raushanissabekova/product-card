@@ -5,16 +5,15 @@ export class Modal {
   }
 }
 
-open() {
+open() 
     if (this.modalElement) {
       this.modalElement.classList.add('open');
     } else {
       console.error(`Модальное окно с id "${this.modalId}" не найдено!`);
     }
-}
 
-close() {
+
+close() 
     if (this.modalElement) {
       this.modalElement.classList.remove('open');
     }
-}

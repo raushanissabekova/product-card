@@ -11,8 +11,8 @@ import './script.js';
 
 // main.js (или файл логики задания №9)
 
-import { Form } from './Form.js';
-import { Modal } from './Modal.js'; // Используем ранее созданный класс модального окна
+import { Form } from './form.js';
+import { Modal } from './modal.js'; // Используем ранее созданный класс модального окна
 
 // 1. Создаем экземпляры классов, передавая ID элементов из HTML
 const regModal = new Modal('regModal');    // id модального окна
