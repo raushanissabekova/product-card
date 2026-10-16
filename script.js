@@ -71,3 +71,36 @@ if (allCards.length > 0) {
     });
   });
 }
+
+import { sum } from '/math.js';
+
+console.log(sum(2, 3)); // Вывод: Сумма 2 и 3 равна: 5
+console.log(mul(2, 3)); // Вывод: Произведение 2 и 3 равно: 6
+
+
+class CosmeticProduct {
+  constructor(name, price, brand) {
+    this.name = name;
+    this.price = price;
+    this.brand = brand;
+  }
+
+  showInfo() {
+    console.log(`Название: ${this.name}, Цена: ${this.price}, Бренд: ${this.brand}`);
+  }
+}
+
+class Serum extends CosmeticProduct {
+  constructor(name, price, brand, activeIngredient) {
+    super(name, price, brand);
+    this.activeIngredient = activeIngredient;
+  } 
+}
+
+showActiveIngredient() {
+   console.log(`Название: ${this.name}, Цена: ${this.price}, Бренд: ${this.brand}, Активный ингредиент: ${this.activeIngredient}`);
+  }
+  
+const serum = new Serum('Сыворотка', 1500, 'Brand', 'Витамин C');
+console.log(serum.showInfo());
+console.log(serum.showActiveIngredient());
