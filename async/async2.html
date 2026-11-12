@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Отображение пользователей в виде карточек</title>
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        .controls {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+        #usersContainer {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .user-card {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Пользователи</h1>
+
+    <div class="controls">
+        <button id="loadBtn">Получить все карточки</button>
+        <button id="clearBtn">Удалить все карточки</button>
+    </div>
+
+    <div id="usersContainer">Данные загружаются...</div>
+
+    <script src="async2.js"></script>
+
+</body>
+</html>
