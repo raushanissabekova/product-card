@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1, 
+    "firstname": "Anna", 
+    "lastname": "Born", 
+    "age": 30, 
+    "email": "anna.born@example.com"
+    },
+   {
+    "id": 2, 
+    "firstname": "Olga", 
+    "lastname": "Dark", 
+    "age": 30, 
+    "email": "olga.dark@example.com"
+    }
+  ]
