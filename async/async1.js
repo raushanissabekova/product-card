@@ -29,3 +29,5 @@ setTimeout(() => {
     console.log('Пользователи из localStorage:', parsedUsers);
   }
 }, 1000);
+
+fetchData();

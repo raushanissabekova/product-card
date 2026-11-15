@@ -1,4 +1,4 @@
-let allUsers = [user.json];
+let allUsers = [];
 
 async function loadUsers() {
   const savedUsers = localStorage.getItem('usersData');
@@ -60,3 +60,5 @@ function deleteUser(id) {
     allUsers = allUsers.filter(user => user.id !== id);
     renderUsers(allUsers);
 }
+
+loadUsers();
