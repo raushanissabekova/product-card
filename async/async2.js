@@ -1,26 +1,27 @@
 let allUsers = [];
+let originalUsers = [];
 
 async function loadUsers() {
-  const savedUsers = localStorage.getItem('usersData');
-  if (savedUsers) {
-    allUsers = JSON.parse(savedUsers);
-    renderUsers(allUsers);
-  } else {
-
     try {
+        await new Promise(resolve => setTimeout(resolve, 1000));
         const response = await fetch('users.json');
-        allUsers = await response.json();
-        localStorage.setItem('usersData', JSON.stringify(allUsers));
+        originalUsers = await response.json();
+
+        const savedUsers = localStorage.getItem('usersData');
+        if (savedUsers) {
+            const parsedUsers = JSON.parse(savedUsers);
+            allUsers = parsedUsers;
+        } else {
+            allUsers = [...originalUsers];
+            saveToStorage();
+        }
+        
         renderUsers(allUsers);
     } catch (error) {
         console.error('Ошибка:', error);
     }
   }
-}
 
-function saveToStorage() {
-    localStorage.setItem('usersData', JSON.stringify(allUsers));
-}
 
 function renderUsers(usersArray) {
     const container = document.getElementById('usersContainer');
@@ -56,6 +57,11 @@ document.getElementById('clearBtn').addEventListener('click', () => {
 function deleteUser(id) {
     allUsers = allUsers.filter(user => user.id !== id);
     renderUsers(allUsers);
+    saveToStorage();
+}
+
+function saveToStorage() {
+    localStorage.setItem('usersData', JSON.stringify(allUsers));
 }
 
 loadUsers();
