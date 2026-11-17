@@ -44,9 +44,6 @@ function renderUsers(usersArray) {
     });
 }
 
-loadUsers();
-
-
 document.getElementById('loadBtn').addEventListener('click', () => {
     loadUsers();
 });
